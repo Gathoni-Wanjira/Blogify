@@ -8,6 +8,16 @@ function Newsletter(){
 
 
 
+    function handleSubmit(e){
+        e.preventdefault()
+
+    }
+
+
+
+
+
+
 
 
 
@@ -59,7 +69,7 @@ function Newsletter(){
                  
            </div>
 
-           <button type="submit" class="btn btn-outline-info">Submit</button>
+           <button type="submit" class="btn btn-outline-info" onClick={(e) => handleSubmit(e)}>Subscribe</button>
             </form>
             
 

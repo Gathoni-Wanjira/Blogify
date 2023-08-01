@@ -1,6 +1,6 @@
-.App {
+/* .App {
   text-align: center;
-}
+} */
 
 .App-logo {
   height: 40vmin;
@@ -35,4 +35,31 @@
   to {
     transform: rotate(360deg);
   }
+}
+
+
+.category-checkbox{
+  display:flex;
+  margin-bottom: -10px;
+  margin-top: -30px;
+}
+
+
+.category-checkbox div{
+  padding: 30px;
+}
+
+
+#email{
+  padding-right: 40vw;
+  
+}
+
+.newsletter{
+  padding-left: 30vw;
+  background-color: #282c34;
+  color: aliceblue;
+  margin: 10px;
+  padding-top: 30px;
+  padding-bottom: 30px;
 }
