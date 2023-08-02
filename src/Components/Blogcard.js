@@ -15,11 +15,11 @@ function Blogcard({ title,mins, author,blog_image, date,category,blog_post,comme
           <div className="col-md-8">
             <div className="card-body">
               <h5 className="card-title">{title}</h5>
-              <p className="card-text p-3 mb-2 author">
+              <p className="card-text p-2 mb-2 author">
                 <small className="text-body-secondary">{author}</small>
               </p>
               <p className="card-text">
-                {blog_post}...
+                {blog_post}<a href="#">...Read More</a>
               </p>
               <div className="row">
                 <p className="col-2">
@@ -35,17 +35,22 @@ function Blogcard({ title,mins, author,blog_image, date,category,blog_post,comme
                 <div className="row">
                   <p className="col-2">
                     <small className="text-body-secondary">
-                      <i className="fa-solid fa-heart"></i>{likes}
+                      <i className="fa-solid fa-heart"></i>   {likes}
                     </small>
                   </p>
                   <p className="col-2">
                     <small className="text-body-secondary">
-                      <i className="fa-solid fa-comment"></i>{comments}
+                      <i className="fa-solid fa-comment"></i>   {comments}
                     </small>
                   </p>
                   <p className="col-2">
                     <small className="text-body-secondary">
-                      <i className="fa-solid fa-share"></i>
+                      <i className="fa-solid fa-share-nodes"></i>
+                    </small>
+                  </p>
+                  <p className="col-2">
+                    <small className="text-body-secondary">
+                      <i className="fa-solid fa-bookmark"></i>
                     </small>
                   </p>
                 </div>
