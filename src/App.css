@@ -51,15 +51,60 @@
 
 
 #email{
-  padding-right: 40vw;
   
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+
+  
+}
+#email div{
+
+  margin-right: 40px;
+
+}
+#submit{
+  margin-top: 30px;
 }
 
 .newsletter{
   padding-left: 30vw;
   background-color: #282c34;
   color: aliceblue;
-  margin: 10px;
+  
   padding-top: 30px;
   padding-bottom: 30px;
 }
+.footer{
+  background-color: #071d47;
+  height: 20vh;
+  align-items: center;
+  color: aliceblue;
+  text-align: center;
+}
+
+.footer-links li{
+  list-style-type: none;
+  float: left;
+  margin: 10px;
+  text-align: center;
+  text-decoration: dashed;
+  
+}
+.footer-links li a{
+  
+  color: aliceblue;
+}
+.footer-links li a:hover
+  {
+  color: rgb(45, 181, 223);
+
+}
+.footer-links{
+  margin: 1px 600px;
+  
+}
+.icons img{
+  padding: 10px 10px;
+}
+
