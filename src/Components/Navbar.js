@@ -1,6 +1,8 @@
-import React from 'react'
+import React from 'react';
+import Search from './Search';
 
-function Navbar() {
+function Navbar({ OnSearch }) {
+  
   return (
     <div className='Navbar'>
         <ul>
@@ -8,7 +10,7 @@ function Navbar() {
             <li>Blogs</li>
             <li>Newsletters</li>
             <li>Resources</li>
-            <li className = "search" ><input type='text' placeholder='search blog'  /> <i className="fa-solid fa-magnifying-glass"></i></li>
+            <Search  OnSearch={OnSearch}/>
             <li><button className='addblogbtn'><a href='#showAddBlog'>Post Blog</a></button></li>
         </ul>
 
