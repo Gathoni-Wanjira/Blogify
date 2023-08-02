@@ -19,7 +19,7 @@ function Footer() {
       </div>
 
       <div>
-        <h2>Blogify</h2>
+        <h2>Blogiify</h2>
 
         <p>Copyright © 2023 Blogify, Inc.</p>
         <div className="footer-links">
