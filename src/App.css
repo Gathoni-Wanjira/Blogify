@@ -180,23 +180,41 @@
     margin-top: 50px;
     margin-bottom: 35px;
     margin-left: 190px;
-    gap: 90px;
+    gap: 24px;
 }
 .sort Button {
-    border: 0px;
+    border: 1px solid #14213d;
     outline: none;
-    border-radius: 10px;
-    padding: 10px;
-    width: 120px;
-    background-color: #fcead7;
-    color: #2e475d;
+    border-radius: 64px;
+    padding: 8px 24px;
+    background: #fff;
+    color: black;
 
 }
+.sort Button:hover{
+    
+    border: 1px solid #ff5c35;
+    color: #fff;
+    background-color: #ff5c35;
+
+}
+
 .author {
     background-color: #fcead7;
-    width: 30%;
-    border-radius: 10px;
-
-    padding: 2px 2px;
+    padding: 6px 24px;
+    text-align: center;
+    width: auto;
+    border-radius: 64px;
+}
+#showAddBlog {
+    display: flex;
+    justify-content: center;
     
 }
+#showAddBlog form *{
+    margin-bottom: 16px;
+    padding: 8px; 
+    width: 480px;
+
+}
+

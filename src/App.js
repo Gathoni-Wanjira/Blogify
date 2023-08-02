@@ -31,9 +31,9 @@ function App() {
      <Navbar />
      <Sort/>
      <BlogCollection blogposts={blogposts} />
+     <Modal/>
      <Newsletter />
      <Footer />
-     <Modal/>
     </div>
   );
 }
