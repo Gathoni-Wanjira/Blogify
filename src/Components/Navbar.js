@@ -1,24 +1,19 @@
- function Navbar(){
-   
-return( 
-    <>
-    <div className="col-2 d-flex mx-auto p-2 p-3 mb-2 bg-success-subtle text-emphasis-success" >
-    <i className="fa-solid fa-blog  row"></i>
-     <p className="row">Blogs</p>,
-    <p className="row">Newsletters</p>, 
-    <p className="row">Resources</p> 
+import React from 'react'
+
+function Navbar() {
+  return (
+    <div className='Navbar'>
+        <ul>
+            <li><i className="fa-solid fa-blog logo"></i></li>
+            <li>Blogs</li>
+            <li>Newsletters</li>
+            <li>Resources</li>
+            <li className = "search" ><input type='text' placeholder='search blog'  /> <i class="fa-solid fa-magnifying-glass"></i></li>
+            <li><button className='addblogbtn'>Post Blog</button></li>
+        </ul>
 
     </div>
-    <div className="col-2 d-flex" >
-    <button type="button" className="row">Add Blog</button>
-    </div>
-    
+  )
+}
 
-    </>
-   
-) 
-    
-
- }
-
- export default Navbar;
+export default Navbar

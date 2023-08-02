@@ -1,55 +1,52 @@
 import React from "react";
-import facebook from '../img/facebook.png'
-import linkedin from '../img/linkedin.png'
-import instagram from '../img/instagram.png'
-import twitter from '../img/twitter.png'
-import youtube from '../img/youtube.png'
-import tiktok from '../img/tik-tok.png'
+import facebook from "../img/facebook.png";
+import linkedin from "../img/linkedin.png";
+import instagram from "../img/instagram.png";
+import twitter from "../img/twitter.png";
+import youtube from "../img/youtube.png";
+import tiktok from "../img/tik-tok.png";
 
-function Footer(){
+function Footer() {
+  return (
+    <div className="footer">
+      <div className="icons">
+        <img src={facebook} alt="facebook" />
+        <img src={instagram} alt="instagram" />
+        <img src={linkedin} alt="linkedin" />
+        <img src={twitter} alt="twitter" />
+        <img src={youtube} alt="youtube" />
+        <img src={tiktok} alt="tiktok" />
+      </div>
 
-    return(
-        <div className="footer">
+      <div>
+        <h2>Blogify</h2>
 
-            <div className="icons">
-                
-                <img src={facebook} alt="" />
-                <img src={instagram} alt="" />
-                <img src={linkedin} alt="" />
-                <img src={twitter} alt="" /> 
-                <img src={youtube} alt="" />
-                <img src={tiktok} alt="" />
-
-            </div>
-
-            <div>
-                <h2>Blogify</h2>
-
-                <p>Copyright © 2023 Blogify, Inc.</p>
-            </div>
-            <div className="footer-links">
-
-
-
-                <ul>
-                    <li><a href="">Legal Stuff</a></li>
-                    <li><p>|</p></li>
-                    <li><a href="">Privacy Policy</a></li>
-                    <li><p>|</p></li>
-                    <li><a href="">Security</a></li>
-                    <li><p>|</p></li>
-                    <li><a href="">Website Accesibility</a></li>
-
-                    
-                    
-                </ul>
-
-            </div>
-
-            
-
+        <p>Copyright © 2023 Blogify, Inc.</p>
+        <div className="footer-links">
+          <p>
+            <a href="https://www.sarahchetrit.com/blog-privacy-policy/#:~:text=Besides%20the%20terms%20of%20use,you%20mention%20on%20your%20site.">
+              Legal Stuff
+            </a>
+          </p>
+          <p>
+            <a href="https://www.freeprivacypolicy.com/blog/privacy-policy-url/">
+              Privacy Policy
+            </a>
+          </p>
+          <p>
+            <a href="https://preyproject.com/blog/it-security-policies-the-basics">
+              Security
+            </a>
+          </p>
+          <p>
+            <a href="https://www.powellslaw.com/website-management-policy/">
+              Web Management
+            </a>
+          </p>
         </div>
-    )
+      </div>
+    </div>
+  );
 }
 
 export default Footer;
