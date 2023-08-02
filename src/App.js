@@ -1,6 +1,9 @@
 import { useEffect, useState } from 'react';
 import './App.css';
 import BlogCollection from './Components/BlogCollection'
+import Navbar from './Components/Navbar';
+import Newsletter from './Components/Newsletter';
+import Footer from './Components/Footer';
 
 
 function App() {
@@ -22,8 +25,10 @@ function App() {
 
   return (
     <div className="App">
-     <h2>Nav Bar Area</h2>
+     <Navbar />
      <BlogCollection blogposts={blogposts} />
+     <Newsletter />
+     <Footer />
     </div>
   );
 }

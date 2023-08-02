@@ -1,10 +1,10 @@
 import React from "react";
-import facebook from './img/facebook.png'
-import linkedin from './img/linkedin.png'
-import instagram from './img/instagram.png'
-import twitter from './img/twitter.png'
-import youtube from './img/youtube.png'
-import tiktok from './img/tik-tok.png'
+import facebook from '../img/facebook.png'
+import linkedin from '../img/linkedin.png'
+import instagram from '../img/instagram.png'
+import twitter from '../img/twitter.png'
+import youtube from '../img/youtube.png'
+import tiktok from '../img/tik-tok.png'
 
 function Footer(){
 
@@ -16,7 +16,7 @@ function Footer(){
                 <img src={facebook} alt="" />
                 <img src={instagram} alt="" />
                 <img src={linkedin} alt="" />
-                <img src={twitter} alt="" />
+                <img src={twitter} alt="" /> 
                 <img src={youtube} alt="" />
                 <img src={tiktok} alt="" />
 
