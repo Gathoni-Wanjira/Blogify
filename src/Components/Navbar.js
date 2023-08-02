@@ -9,7 +9,7 @@ function Navbar() {
             <li>Newsletters</li>
             <li>Resources</li>
             <li className = "search" ><input type='text' placeholder='search blog'  /> <i className="fa-solid fa-magnifying-glass"></i></li>
-            <li><button className='addblogbtn'  data-bs-toggle="modal" data-bs-target="#exampleModal">Post Blog</button></li>
+            <li><button className='addblogbtn'><a href='#showAddBlog'>Post Blog</a></button></li>
         </ul>
 
     </div>
