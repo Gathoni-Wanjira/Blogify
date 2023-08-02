@@ -191,6 +191,15 @@
     color: black;
 
 }
+.sort select{ 
+    border: 1px solid #14213d;
+    outline: none;
+    border-radius: 64px;
+    padding: 8px 24px;
+    background: #fff;
+    color: black;
+
+}
 .sort Button:hover{
     
     border: 1px solid #ff5c35;
@@ -217,4 +226,47 @@
     width: 480px;
 
 }
+.table {
+   
+    justify-content: center;
+    display: flex;
+    gap: 40px;
+    align-self: baseline;
+    
+}
+.sub-nav {
+    display: flex;
+    gap: 10px;
+}
+#cat{
+border-radius: 10px;
+border: 1px solid#2e475d;
+}
 
+#author {
+    border-radius: 10px;
+    border: 1px solid#2e475d;
+}
+#post {
+    border-radius: 10px;
+    border: 1px solid#2e475d;
+
+}
+.table-input {
+    border-radius: 10px;
+    
+}
+.table-input input{
+    width: 100px;
+    border-radius: 10px;
+    border: 1px solid#2e475d;
+    
+}
+#submitBlogbtn {
+    background-color: #ff5c35;
+    color: #fff2d8;
+    border: none;
+    padding: 8px;
+    width: 150px;
+
+}
