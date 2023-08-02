@@ -192,3 +192,11 @@
     color: #2e475d;
 
 }
+.author {
+    background-color: #fcead7;
+    width: 30%;
+    border-radius: 10px;
+
+    padding: 2px 2px;
+    
+}

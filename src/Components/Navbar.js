@@ -8,8 +8,8 @@ function Navbar() {
             <li>Blogs</li>
             <li>Newsletters</li>
             <li>Resources</li>
-            <li className = "search" ><input type='text' placeholder='search blog'  /> <i class="fa-solid fa-magnifying-glass"></i></li>
-            <li><button className='addblogbtn'>Post Blog</button></li>
+            <li className = "search" ><input type='text' placeholder='search blog'  /> <i className="fa-solid fa-magnifying-glass"></i></li>
+            <li><button className='addblogbtn'  data-bs-toggle="modal" data-bs-target="#exampleModal">Post Blog</button></li>
         </ul>
 
     </div>
