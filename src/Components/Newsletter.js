@@ -2,7 +2,7 @@ import React from "react";
 
 function Newsletter() {
   function handleSubmit(e) {
-    e.preventdefault();
+       e.preventdefault();
   }
 
   return (
@@ -10,7 +10,7 @@ function Newsletter() {
       <h1>Subscribe to our Blogs</h1>
       <p>Select the blog emails you want to recieve:</p>
 
-      <form>
+      <form >
         <div className="category-checkbox">
           <div class="form-check">
             <input
@@ -77,7 +77,7 @@ function Newsletter() {
           <button
             type="submit"
             class="btn btn-outline-info"
-            onClick={(e) => handleSubmit(e)}
+            onSubmit={handleSubmit}
           >
             Subscribe
           </button>
