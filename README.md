@@ -34,11 +34,11 @@ npm install
 
 - Filter New Blogs Section. 
   
-  <img src="./images/New.jpeg" alt="New Blogs" />
+  <img src="./images/Newest.jpeg" alt="New Blogs" />
 
 - Filter Top Blogs Section. 
   
-  <img src="./images/Top.jpeg" alt="Top Blogs" />
+  <img src="./images/Toppest.jpeg" alt="Top Blogs" />
 
 - Blogcard Section. 
   
