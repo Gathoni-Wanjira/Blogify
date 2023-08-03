@@ -44,8 +44,10 @@ function App() {
 
 
 
+
   /////filters the blog data based on their category
   function handleCategories(e) {
+
 
     let target = e.target.value
     setCateg(target);
