@@ -44,6 +44,10 @@ npm install
   
   <img src="./images/Blogcard.jpeg" alt="Blog cards screenshot" /> 
 
+- Postblog Section. 
+  
+  <img src="./images/Postblog.jpeg" alt="Blog cards screenshot" /> 
+
 - Footer Section. 
   
   <img src="./images/Footer.jpeg" alt="Footer screenshot" />
