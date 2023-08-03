@@ -1,4 +1,5 @@
-import { useEffect, useState } from 'react';
+import { useEffect, useState, useLayoutEffect } from 'react';
+
 import './App.css';
 import BlogCollection from './Components/BlogCollection'
 import Navbar from './Components/Navbar';
@@ -51,6 +52,40 @@ function App() {
 
 }
 
+  const handleLike = (id, currentLIkes)=>{
+    
+      console.log
+      ("You loked A blog with id: ", id, currentLIkes)
+
+      fetch(`http://localhost:3002/blogs/${id}`, {
+        method: "PATCH",
+        headers: {
+          "Content-Type": "application/json"
+        },
+        body: JSON.stringify({ likes: currentLIkes })
+      })
+
+      .then(res=>{
+
+        if(res.ok){
+          const updatedBlogPosts =blogposts.map((blog)=>{
+            if(blog.id === id){
+              return{...blog, likes: currentLIkes}
+            }
+            return blog
+          });
+
+          setblogposts(updatedBlogPosts)
+        }else{
+          alert("you can't like")
+        }
+      })
+      .catch((error) => {
+        alert.error("Error:", error);
+    });
+
+}
+
 
 
 return (
@@ -60,7 +95,7 @@ return (
 
     <Navbar OnSearch={handleSearch} />
     <Sort />
-    <BlogCollection blogposts={blogposts} search={search} />
+    <BlogCollection blogposts={blogposts} search={search}  onLike={handleLike}/>
     <Modal onAdd={handleAdd} />
     <Newsletter />
     <Footer />
