@@ -10,58 +10,67 @@ import Sort from './Components/Sort';
 
 function App() {
 
- 
-    const [blogposts, setblogposts] = useState([]);
-    const [search, setSearch] = useState('')
-    
-    
-    ////setting the value of the search value as the new state.
-    const handleSearch = (value) => {
-        setSearch(value)
-        console.log(value)
-    }
+
+  const [blogposts, setblogposts] = useState([]);
+  const [search, setSearch] = useState('')
 
 
-    
-    
-
-    
-    
-
-    
-    useEffect(() => {
-        fetch("http://localhost:3002/blogs")
-        .then(response => response.json())
-        .then(blogs => {
-            console.log(blogs)
-            setblogposts(blogs)
-            
-            
-
-        })
-    
-    },[])
-
-    
-
-  return (
-    <div className="App">
-
-      
-      
-     <Navbar OnSearch={handleSearch}/>
-     <Sort/>
-     <BlogCollection blogposts={blogposts} search={search}/>
-     <Modal/>
-     <Newsletter />
-     <Footer />
-      
+  ////setting the value of the search value as the new state.
+  const handleSearch = (value) => {
+    setSearch(value)
+    console.log(value)
+  }
 
 
-      
-     
-    </div>
-  );
+
+
+
+
+
+
+
+  useEffect(() => {
+    fetch("http://localhost:3002/blogs")
+      .then(response => response.json())
+      .then(blogs => {
+        console.log(blogs)
+        setblogposts(blogs)
+
+
+
+      })
+
+  }, [])
+
+  const handleAdd = (formData) => {
+    setblogposts((prevData) => [
+      ...prevData,
+      formData
+    ]
+    )
+
+}
+
+
+
+return (
+  <div className="App">
+
+
+
+    <Navbar OnSearch={handleSearch} />
+    <Sort />
+    <BlogCollection blogposts={blogposts} search={search} />
+    <Modal onAdd={handleAdd} />
+    <Newsletter />
+    <Footer />
+
+
+
+
+
+  </div>
+);
 }
 
 export default App;
