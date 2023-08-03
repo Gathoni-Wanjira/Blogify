@@ -15,9 +15,21 @@ function App() {
   const [blogposts, setblogposts] = useState([]);
   const [search, setSearch] = useState('')
 /////the data that is going to be used to render the BlogCollection
-  const [filtered, setFiltered] = useState([])
+  const [filtered, setFiltered] = useState(blogposts)
 /////used to determine whether category state has been changed.
   const [categ, setCateg] = useState('All')
+
+
+useEffect(() => {
+  if(categ === 'All'){
+    setFiltered(blogposts)
+    // console.log(filtered)
+}
+
+}
+  
+)
+  
 
 /////filters the blog data based on their category
   function handleCategories(e){
