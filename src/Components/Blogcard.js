@@ -1,7 +1,8 @@
 import React from "react";
 import { useState } from "react";
+import { Link } from "react-router-dom";
 
-function Blogcard({ title,mins, author,blog_image, date,category,blog_post,comments,likes, id, onLike}) {
+function Blogcard({ title,mins, author,blog_image, date,category,blog_post,comments,likes, id, onLike, onReadMoreClick }) {
 
 const[currentLIkes, setCurrentLIkes] =useState(likes)
 const [isLiked, setIsLiked] = useState(false);
@@ -44,7 +45,7 @@ const [isLiked, setIsLiked] = useState(false);
                 <small className="text-body-secondary author">{author}</small>
               </p>
               <p className="card-text">
-                {blog_post}<a href="#">...Read More</a>
+                {blog_post}  <Link to={`/blog/${id}`} onClick={onReadMoreClick}>Read More...</Link> 
               </p>
               <div className="row">
                 <p className="col-2">
