@@ -53,6 +53,7 @@ function BlogCollection({blogposts, search, onLike}) {
       {search === '' ? allBlogs(): searchData.map((ablog) => {
       return (
         <Blogcard
+        onLike = {handleonLike}
           key={ablog.id}
           title={ablog.title}
           author={ablog.author}
