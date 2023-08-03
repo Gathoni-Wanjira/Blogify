@@ -290,6 +290,10 @@ border: 1px solid#2e475d;
   border-color: #2e475d;
 }
 
+.blogpostheading{
+    text-align: center;
+    font-size: 2em;
+    text-decoration: underline;
 
 #thumbnail{
   min-height: 300px;
