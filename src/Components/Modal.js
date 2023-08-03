@@ -70,7 +70,7 @@ function Modal({ onAdd }) {
         });
     };
 
-    console.log(formData)
+    // console.log(formData)
     return (
         <div className="addBlogSection" id="showAddBlog">
             <form onSubmit={handleSubmit}>

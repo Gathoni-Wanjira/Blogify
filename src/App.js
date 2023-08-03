@@ -1,5 +1,4 @@
 import { useEffect, useState, useLayoutEffect } from 'react';
-
 import './App.css';
 import BlogCollection from './Components/BlogCollection'
 import Navbar from './Components/Navbar';
@@ -18,13 +17,20 @@ function App() {
   const [filtered, setFiltered] = useState([])
 /////used to determine whether category state has been changed.
   const [categ, setCateg] = useState('All')
+  const [pressed, setPressed] = useState(false)
+
+  useEffect(() => {
+    if(categ === 'All' && pressed === false){
+      setFiltered(blogposts)
+    }
+  })
 
 /////filters the blog data based on their category
   function handleCategories(e){
         
     let target = e.target.value
     setCateg(target);
-    if(target != 'All'){
+    if(target !== 'All' && pressed === false){
         
         setFiltered( blogposts.filter((item) => item.category === target))
         
@@ -38,6 +44,26 @@ function App() {
     }
 
 }
+
+////function the renders the blogcolection based on the blogs' date 
+///when the 'NEW' Sort button is pressed
+
+function handleNew(){
+  const arr = [...filtered]
+  setPressed(!pressed)
+  arr.sort(function(a, b) {
+    var c = new Date(a.date);
+    var d = new Date(b.date);
+    return c-d;
+});
+
+const arr2 = arr.reverse()
+console.log(arr2)
+
+setFiltered(arr2)
+}
+
+
 
 
   ////setting the value of the search value as the new state.
@@ -112,11 +138,12 @@ function App() {
 
 
 
+
 return (
   <div className="App">
     <Navbar OnSearch={handleSearch} />
 
-     <Sort handleCategories={handleCategories}/>
+     <Sort handleCategories={handleCategories} handleNew={handleNew}/>
     <BlogCollection blogposts={filtered} search={search}  onLike={handleLike}/>
 
     <Modal onAdd={handleAdd} />
