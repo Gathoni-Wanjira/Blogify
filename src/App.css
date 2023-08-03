@@ -183,7 +183,7 @@
     gap: 24px;
 }
 .sort Button {
-    border: 1px solid #14213d;
+    border: 1px solid #162953;
     outline: none;
     border-radius: 64px;
     padding: 8px 24px;
@@ -284,4 +284,8 @@ border: 1px solid#2e475d;
 }
 .policy {
     font-size: medium;
+}
+
+.Category{
+  border-color: #2e475d;
 }
