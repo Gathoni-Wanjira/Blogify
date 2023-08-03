@@ -18,9 +18,10 @@ function App() {
 /////used to determine whether category state has been changed.
   const [categ, setCateg] = useState('All')
   const [pressed, setPressed] = useState(false)
+  const [topPressed, setTopPressed] = useState(false)
 
   useEffect(() => {
-    if(categ === 'All' && pressed === false){
+    if(categ === 'All' && pressed === false && topPressed === false){
       setFiltered(blogposts)
     }
   })
@@ -42,7 +43,7 @@ useEffect(() => {
         
     let target = e.target.value
     setCateg(target);
-    if(target !== 'All' && pressed === false){
+    if(target !== 'All' && pressed === false && topPressed === false){
         
         setFiltered( blogposts.filter((item) => item.category === target))
         
@@ -69,14 +70,21 @@ function handleNew(){
     return c-d;
 });
 
+
 const arr2 = arr.reverse()
 console.log(arr2)
 
 setFiltered(arr2)
 }
 
-
-
+////handles sorting blog collection based on the number of likes a blog has
+function handleTop(){
+  const arr = [...filtered]
+  setTopPressed(!topPressed)
+  arr.sort((a, b) => parseFloat(b.likes) - parseFloat(a.likes));
+  console.log(arr)
+  setFiltered(arr)
+}
 
   ////setting the value of the search value as the new state.
   const handleSearch = (value) => {
@@ -155,7 +163,7 @@ return (
   <div className="App">
     <Navbar OnSearch={handleSearch} />
 
-     <Sort handleCategories={handleCategories} handleNew={handleNew}/>
+     <Sort handleCategories={handleCategories} handleNew={handleNew} handleTop={handleTop}/>
     <BlogCollection blogposts={filtered} search={search}  onLike={handleLike}/>
 
     <Modal onAdd={handleAdd} />

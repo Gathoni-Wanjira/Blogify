@@ -1,14 +1,15 @@
 import React from 'react';
 import New from './New';
+import Top from './Top';
 import Category from './Category';
 
 
-function Sort({handleCategories, handleNew}) {
+function Sort({handleCategories, handleNew, handleTop}) {
   return (
     <div className='sort'>
         <Category handleCategories={handleCategories}/>
         <New handleNew={handleNew}/>
-        <button>Top</button>
+        <Top handleTop={handleTop}/>
     </div>
   )
 }
