@@ -294,4 +294,15 @@ border: 1px solid#2e475d;
     text-align: center;
     font-size: 2em;
     text-decoration: underline;
+
+#thumbnail{
+  min-height: 300px;
+  max-height: 300px;
+
+  min-width: 400px;
+  max-width: 400px;
+
+  margin: 0px;
+
+  background-size: cover;
 }
