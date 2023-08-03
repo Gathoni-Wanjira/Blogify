@@ -48,6 +48,10 @@ npm install
   
   <img src="./images/Postblog.jpeg" alt="Blog cards screenshot" /> 
 
+- Readmore Section. 
+  
+  <img src="./images/Readmore.jpeg" alt="Readmore screenshot" /> 
+
 - Footer Section. 
   
   <img src="./images/Footer.jpeg" alt="Footer screenshot" />
