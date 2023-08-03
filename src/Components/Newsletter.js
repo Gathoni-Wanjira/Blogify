@@ -86,10 +86,7 @@ function Newsletter() {
           We're committed to your privacy. Blogify uses the information you
           provide to us to contact you about our relevant content, products, and
           services. You may unsubscribe from these communications at any time.
-          For more information, check out our{" "}
-          <a href="https://www.freeprivacypolicy.com/blog/privacy-policy-url/">
-            privacy policy .
-          </a>
+          For more information, check out our <a href="https://www.freeprivacypolicy.com/blog/privacy-policy-url/">privacy policy </a>
         </p>
       </form>
     </div>
