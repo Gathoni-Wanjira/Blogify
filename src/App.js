@@ -21,12 +21,24 @@ function App() {
   const [filtered, setFiltered] = useState(blogposts)
   /////used to determine whether category state has been changed.
   const [categ, setCateg] = useState('All')
+  ////state used to determine if the 'New' button is pressed or not 
   const [pressed, setPressed] = useState(false)
-  const [topPressed, setTopPressed] = useState(false)
+    ////state used to determine if the 'Top' button is pressed or not 
 
+  const [topPressed, setTopPressed] = useState(false)
+//a side effect of running app js is that when 'All' state of the
+//category, Which it will be by default, then it should just render all the blogs
   useEffect(() => {
-    if (categ === 'All' && pressed === false && topPressed === false) {
-      setFiltered(blogposts)
+
+    if(categ === 'All' ){
+      if(pressed === false){
+        if( topPressed === false){
+           setFiltered(blogposts)
+        }
+       
+      }
+      
+
     }
   })
 
@@ -47,48 +59,74 @@ function App() {
 
     let target = e.target.value
     setCateg(target);
-    if (target !== 'All' && pressed === false && topPressed === false) {
 
-      setFiltered(blogposts.filter((item) => item.category === target))
-
-
-
-      return console.log(filtered)
-    } else {
-
-      setFiltered(blogposts)
-      return //console.log(filtered)
+    ///conditional for setting both the 'New' and 'Top' button as unpressed
+    if(pressed ==true){
+      setTopPressed(false);
     }
+    
+    if(topPressed ==true){
+      setPressed(false)
+    }
+    
+    if(target !== 'All'){
+     
+                setFiltered( blogposts.filter((item) => item.category === target))
+
+      
+        
+        
+        
+       
+        return  console.log(filtered)
+    }else{
+      setTopPressed(false);
+      setTopPressed(false);
+        setFiltered(blogposts)
+        return //console.log(filtered)
+
+    }
+    
 
   }
 
   ////function the renders the blogcolection based on the blogs' date 
   ///when the 'NEW' Sort button is pressed
 
-  function handleNew() {
-    const arr = [...filtered]
-    setPressed(!pressed)
-    arr.sort(function (a, b) {
-      var c = new Date(a.date);
-      var d = new Date(b.date);
-      return c - d;
-    });
+
+function handleNew(){
+  const arr = [...filtered]
+  
+  arr.sort(function(a, b) {
+    var c = new Date(a.date);
+    var d = new Date(b.date);
+    return c-d;
+});
 
 
     const arr2 = arr.reverse()
     console.log(arr2)
 
-    setFiltered(arr2)
-  }
 
-  ////handles sorting blog collection based on the number of likes a blog has
-  function handleTop() {
-    const arr = [...filtered]
-    setTopPressed(!topPressed)
-    arr.sort((a, b) => parseFloat(b.likes) - parseFloat(a.likes));
-    console.log(arr)
-    setFiltered(arr)
-  }
+setFiltered(arr2)
+//sets the opposite button as unpressed
+setTopPressed(false)
+setPressed(!pressed)
+}
+
+////handles sorting blog collection based on the number of likes a blog has
+function handleTop(){
+  const arr = [...filtered]
+  
+  arr.sort((a, b) => parseFloat(b.likes) - parseFloat(a.likes));
+  console.log(arr)
+  setFiltered(arr)
+  setTopPressed(!topPressed)
+  //sets the opposite button as unpressed
+  setPressed(false)
+  
+}
+
 
   ////setting the value of the search value as the new state.
   const handleSearch = (value) => {

@@ -1,47 +1,56 @@
 # BLOGIFY 
 
 
-Using `Blogify`,users are able to find interesting blogs about fascinating topics.Users can also add their own blogs which can be read by other users.  
+`Blogify`,users are able to find interesting blogs about various topics.Users are able to like the blog of their choice, search for the existing blogs with their titles , filter blogs with categories, blogs added latest and top blogs which have more likes than others.Blogify also allows the users to post a new blog which can be read by other users.
 
-## PROJECT GOALS.    
----
 
-- Design and architect features across ui.
-- Communicate and collaborate in a technical environment.
-- Integrate JavaScript through React and an external API.
-- Debug issues in small- to medium-sized projects.
-- Build and iterate on a project MVP.
-
-## PROJECT REQUIREMENTS.   
----
-You must make a single page application (only one index.html file) using create-react-app
-Your app should use at least 5 components in a way that keeps your code well organized
-There should be at least 3 client-side routes using react-router
-Links to an external site.
-Use the RESTful API that has been provided by your Technical Mentor.
-Use the following doc
-Links to an external site. for reference to the remaining MANDATORY requirements.
 ## TECHNOLOGIES USED.  
 ---
-
-The following have been used on this project:
-
 - HTML
-- CSS
-- JavaScript/React
+- CSS/Bootstrap.
+- Javascript/ React.
 
-  - #### Live link to view the project  <a href="">Blogify .</a>
 
 ## SETUP REQUIREMENTS.  
  ---
+- Copy the github repository url
+- Clone to your computer
+- Open terminal and navigate to the directory of the project you just cloned to your computer
+- Run the following command to install all the dependencies
+ ```
+npm install
+```
 
-- Git
-- Web-browser or your choice
-- Github
+
 
 ## SCREENSHOTS OF THE APPLICATION.
 
+- Home Section.
+  <img src="./images/Home.jpeg" alt="Home screenshot" />
 
+- Categories Section. 
+  
+  <img src="./images/Categories.jpeg" alt="Categories screenshot" />
+
+- Filter New Blogs Section. 
+  
+  <img src="./images/New.jpeg" alt="New Blogs" />
+
+- Filter Top Blogs Section. 
+  
+  <img src="./images/Top.jpeg" alt="Top Blogs" />
+
+- Blogcard Section. 
+  
+  <img src="./images/Blogcard.jpeg" alt="Blog cards screenshot" /> 
+
+- Postblog Section. 
+  
+  <img src="./images/Postblog.jpeg" alt="Blog cards screenshot" /> 
+
+- Footer Section. 
+  
+  <img src="./images/Footer.jpeg" alt="Footer screenshot" />
 
 
 ## AUTHOR  
@@ -52,5 +61,5 @@ The following have been used on this project:
 ## COPYRIGHT.  
 --- 
 
-Released under the MIT License. See the [LICENSE](https://github.com/Gathoni-Wanjira/Cocktail-Haven/blob/main/LICENSE) file.
+Released under the MIT License. See the [LICENSE](https://github.com/Gathoni-Wanjira/Blogify) file.
 
