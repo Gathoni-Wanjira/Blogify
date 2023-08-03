@@ -20,6 +20,7 @@ function Blogcard({ title,mins, author,blog_image, date,category,blog_post,comme
               </p>
               <p className="card-text">
                 {blog_post}...
+                <a>ReadMore</a>
               </p>
               <div className="row">
                 <p className="col-2">
