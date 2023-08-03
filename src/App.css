@@ -218,6 +218,9 @@
 #showAddBlog {
     display: flex;
     justify-content: center;
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+    border: 1px solid#fff2d8;
+    margin: 100px;
     
 }
 #showAddBlog form *{
@@ -252,8 +255,11 @@ border: 1px solid#2e475d;
     border: 1px solid#2e475d;
 
 }
-.table-input {
-    border-radius: 10px;
+.table {
+    
+    align-items: baseline;
+    
+    
     
 }
 .table-input input{
@@ -269,4 +275,13 @@ border: 1px solid#2e475d;
     padding: 8px;
     width: 150px;
 
+}
+#blogHeading {
+    font-size: 2em;
+    font-weight: 600;
+    text-align: center;
+    text-decoration: underline;
+}
+.policy {
+    font-size: medium;
 }

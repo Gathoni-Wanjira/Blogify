@@ -4,7 +4,7 @@ function Modal() {
   return (
     <div className="addBlogSection" id="showAddBlog">
       <form>
-        <p>New Blog Post</p>
+        <p id = "blogHeading">New Blog Post</p>
         <div className="table">
             <div className="table-input">
             <input type="text" name="title" id="title" placeholder="title" />
@@ -35,7 +35,7 @@ function Modal() {
             id="post"
             cols="30"
             rows="10"
-            placeholder="blog post"
+            placeholder="post your blog"
           ></textarea>
          <button  id="submitBlogbtn" type="submit" value="Submit Blog Post" >Submit Blog Post</button>
 
