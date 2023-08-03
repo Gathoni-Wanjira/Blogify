@@ -23,7 +23,7 @@ function App() {
 useEffect(() => {
   if(categ === 'All'){
     setFiltered(blogposts)
-    // console.log(filtered)
+    console.log(filtered)
 }
 
 }

@@ -31,7 +31,7 @@ const [isLiked, setIsLiked] = useState(false);
       <div className="card mb-3 w-75 p- mx-auto p-2">
         <div className="row g-0">
           <div className="col-md-4">
-            <img
+            <img id="thumbnail"
               src={blog_image}
               className="img-fluid rounded-start"
               alt="blogimage"
