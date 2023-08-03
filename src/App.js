@@ -14,6 +14,30 @@ function App() {
 
   const [blogposts, setblogposts] = useState([]);
   const [search, setSearch] = useState('')
+/////the data that is going to be used to render the BlogCollection
+  const [filtered, setFiltered] = useState([])
+/////used to determine whether category state has been changed.
+  const [categ, setCateg] = useState('All')
+
+/////filters the blog data based on their category
+  function handleCategories(e){
+        
+    let target = e.target.value
+    setCateg(target);
+    if(target != 'All'){
+        
+        setFiltered( blogposts.filter((item) => item.category === target))
+        
+        
+       
+        return  console.log(filtered)
+    }else{
+        
+        setFiltered(blogposts)
+        return //console.log(filtered)
+    }
+
+}
 
 
   ////setting the value of the search value as the new state.
@@ -90,12 +114,11 @@ function App() {
 
 return (
   <div className="App">
-
-
-
     <Navbar OnSearch={handleSearch} />
-    <Sort />
-    <BlogCollection blogposts={blogposts} search={search}  onLike={handleLike}/>
+
+     <Sort handleCategories={handleCategories}/>
+    <BlogCollection blogposts={filtered} search={search}  onLike={handleLike}/>
+
     <Modal onAdd={handleAdd} />
     <Newsletter />
     <Footer />
