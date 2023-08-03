@@ -1,14 +1,20 @@
 import React from "react";
 import Blogcard from "./Blogcard";
 
-function BlogCollection({blogposts, search}) {
+function BlogCollection({blogposts, search, onLike}) {
+
+  const handleonLike=(id, currentLIkes)=>{
+    onLike(id, currentLIkes)
+  }
 
 ////Maps through the blog data and if the function is called, it renders all of the blog data that was fetched.
   function allBlogs(){
     const allblogs = blogposts.map((ablog) => {
       return (
         <Blogcard
+        onLike = {handleonLike}
           key={ablog.id}
+          id={ablog.id}
           title={ablog.title}
           author={ablog.author}
           blog_image={ablog.avatar_url}

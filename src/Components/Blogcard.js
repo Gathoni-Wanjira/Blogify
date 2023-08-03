@@ -1,6 +1,31 @@
 import React from "react";
+import { useState } from "react";
 
-function Blogcard({ title,mins, author,blog_image, date,category,blog_post,comments,likes}) {
+function Blogcard({ title,mins, author,blog_image, date,category,blog_post,comments,likes, id, onLike}) {
+
+const[currentLIkes, setCurrentLIkes] =useState(likes)
+const [isLiked, setIsLiked] = useState(false);
+
+  const handleLikesClick=(id)=>{
+
+    if(!isLiked){
+
+      const updatedLIkes =parseInt (currentLIkes) + 1
+      setCurrentLIkes(updatedLIkes );
+      setIsLiked(true)
+      onLike(id, updatedLIkes)
+
+    }else{
+
+      const updatedLikes =currentLIkes - 1; 
+      setCurrentLIkes(updatedLikes);
+      setIsLiked(false)
+      onLike(id, updatedLikes)
+
+    }
+    
+
+  }
   return (
     <>
       <div className="card mb-3 w-75 p- mx-auto p-2">
@@ -35,12 +60,12 @@ function Blogcard({ title,mins, author,blog_image, date,category,blog_post,comme
                 <div className="row">
                   <p className="col-2">
                     <small className="text-body-secondary">
-                      <i className="fa-solid fa-heart"></i>   {likes}
+                      <i className="fa-solid fa-heart" onClick={() => handleLikesClick(id)}></i>   {likes}
                     </small>
                   </p>
                   <p className="col-2">
-                    <small className="text-body-secondary">
-                      <i className="fa-solid fa-comment"></i>   {comments}
+                    <small className="text-body-secondary" >
+                      <i className="fa-solid fa-comment"  ></i>   {comments}
                     </small>
                   </p>
                   <p className="col-2">
