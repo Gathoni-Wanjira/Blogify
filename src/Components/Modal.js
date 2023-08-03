@@ -74,7 +74,7 @@ function Modal({ onAdd }) {
     return (
         <div className="addBlogSection" id="showAddBlog">
             <form onSubmit={handleSubmit}>
-                <p>New Blog Post</p>
+                <p className="blogpostheading">New Blog Post</p>
                 <div className="table">
                     <div className="table-input">
                         <input type="text" name="title" id="title" placeholder="title" onChange={handleInputChange} />
