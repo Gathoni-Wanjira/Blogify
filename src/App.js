@@ -37,15 +37,10 @@ function App() {
   })
 
 
-useEffect(() => {
-  if(categ === 'All'){
-    setFiltered(blogposts)
-    console.log(filtered)
-}
 
-}
+
   
-)
+
   
 
 /////filters the blog data based on their category
