@@ -135,7 +135,7 @@ function handleTop(){
 
 
   useEffect(() => {
-    fetch("http://localhost:3002/blogs")
+    fetch("https://blog-json-un87.onrender.com/blogs")
       .then(response => response.json())
       .then(blogs => {
         console.log(blogs)
@@ -161,7 +161,7 @@ function handleTop(){
     console.log
       ("You loked A blog with id: ", id, currentLIkes)
 
-    fetch(`http://localhost:3002/blogs/${id}`, {
+    fetch(`https://blog-json-un87.onrender.com/blogs/${id}`, {
       method: "PATCH",
       headers: {
         "Content-Type": "application/json"

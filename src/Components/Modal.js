@@ -34,7 +34,7 @@ function Modal({ onAdd }) {
         }
 
         
-        fetch("http://localhost:3002/blogs", {
+        fetch("https://blog-json-un87.onrender.com/blogs", {
             method: "POST",
             headers: {
                 "Content-Type": "application/json"
