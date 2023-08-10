@@ -1,7 +1,7 @@
 # BLOGIFY 
 
 
-`Blogify`,users are able to find interesting blogs about various topics.Users are able to like the blog of their choice, search for the existing blogs with their titles , filter blogs with categories, blogs added latest and top blogs which have more likes than others.Blogify also allows the users to post a new blog which can be read by other users.
+On `Blogify`,users are able to find interesting blogs about various topics.Users are able to like the blog of their choice, search for the existing blogs with their titles , filter blogs with categories, blogs added latest and top blogs which have more likes than others.Blogify also allows the users to post a new blog which can be read by other users.
 
 
 ## TECHNOLOGIES USED.  
